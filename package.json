@@ -1,0 +1,15 @@
+{
+  "name": "mongolab-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "author": "Fernando Falci <falci@falci.me>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.1",
+    "request": "^2.58.0"
+  }
+}
