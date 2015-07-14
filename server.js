@@ -20,6 +20,14 @@ app = express()
       API_KEY);
 
     req.pipe(request(url)).pipe(res);
+  })
+  .use('/:collection', function(req, res) {
+    var url = util.format('https://api.mongolab.com/api/1/databases/%s/collections/%s?apiKey=%s', 
+      process.env.DEFAULT_DATABASE || 'default', 
+      req.params.collection,
+      API_KEY);
+
+    req.pipe(request(url)).pipe(res);
   });
 
 app.listen(app.get('port'), function(){
